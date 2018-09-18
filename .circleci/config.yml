@@ -637,17 +637,17 @@ workflows:
 
   build-mac-fork-prs:
     jobs:
-      - osx-testing:
-         <<: *filter-only-prs-from-forks
+      - osx-testing
+#         <<: *filter-only-prs-from-forks
       - osx-testing-tests:
-          <<: *filter-only-prs-from-forks
+#          <<: *filter-only-prs-from-forks
           requires:
             - osx-testing
 
-      - mas-testing:
-          <<: *filter-only-prs-from-forks
+      - mas-testing
+#          <<: *filter-only-prs-from-forks
       - mas-testing-tests:
-          <<: *filter-only-prs-from-forks
+#          <<: *filter-only-prs-from-forks
           requires:
             - mas-testing
 
